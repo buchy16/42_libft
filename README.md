@@ -1,4 +1,5 @@
 # 42_libft
+42 git repository path = git@vogsphere.42lehavre.fr:vogsphere/intra-uuid-18e1ab5d-77e4-46b9-ac08-ca70ba6119f3-7005664-nbuchy
 Utility function library that contains the following functions :
 
 isalpha :

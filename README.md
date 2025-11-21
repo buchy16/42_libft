@@ -182,3 +182,11 @@ The ’del’ function is used to delete the content of a node if needed.
 ==Return Value==
 The new list.
 NULL if the allocation fails.
+
+
+ft_printf :
+Same as the original printf
+
+get_next_line :
+return a line of a text document, with each call, it will send the next line.
+when there nothings to read (or when an error occured), null should be returned.

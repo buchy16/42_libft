@@ -6,7 +6,7 @@
 /*   By: nbuchy <nbuchy@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 13:12:02 by nbuchy            #+#    #+#             */
-/*   Updated: 2025/10/27 17:31:57 by nbuchy           ###   ########.fr       */
+/*   Updated: 2025/11/21 10:15:28 by nbuchy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t str_size)
 
 	i = 0;
 	j = 0;
-	if (str_size <= 0)
+	if (str_size <= 0 || src == NULL)
 		return (ft_strlen(src));
 	while (src[i])
 	{

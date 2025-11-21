@@ -6,20 +6,28 @@
 /*   By: nbuchy <nbuchy@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 15:35:07 by nbuchy            #+#    #+#             */
-/*   Updated: 2025/10/27 17:43:46 by nbuchy           ###   ########.fr       */
+/*   Updated: 2025/11/21 10:16:25 by nbuchy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# include <fcntl.h>
+# include <stdarg.h>
+# include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
+# include <unistd.h>
 
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }					t_list;
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 100
+# endif
 
 void				ft_bzero(void *ptr, size_t o_count);
 int					ft_isalnum(int letter);
@@ -69,5 +77,12 @@ void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
+int					ft_printf(const char *string, ...);
+int					ft_pnbr_b(long nbr, const char *base, int base_lenght);
+int					ft_putnbr_base_max(unsigned long long nbr, const char *base,
+						int base_lenght);
+int					ft_print_pointer(unsigned long long adress);
+int					ft_putstr(char *string);
+char				*get_next_line(int fd);
 
 #endif

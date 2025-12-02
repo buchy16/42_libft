@@ -6,7 +6,7 @@
 /*   By: nbuchy <nbuchy@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 15:52:21 by nbuchy            #+#    #+#             */
-/*   Updated: 2025/11/04 09:37:22 by nbuchy           ###   ########.fr       */
+/*   Updated: 2025/12/02 10:44:00 by nbuchy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static int	count_words(char const *s, char sep)
 		return (count);
 	while (s[i] != 0)
 	{
-		if ((s[i] == sep || s[i + 1] == 0) && bool == 1)
+		if ((s[i] == sep) && bool == 1)
 		{
 			count++;
 			bool = 0;
@@ -49,6 +49,8 @@ static int	count_words(char const *s, char sep)
 			bool = 1;
 		i++;
 	}
+	if (bool == 1)
+		count++;
 	return (count);
 }
 
